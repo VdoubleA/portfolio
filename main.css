@@ -1,0 +1,186 @@
+body{
+    background-color: #303030;
+    color: white;
+    margin: 0px;
+    text-align: justify;
+}
+
+img{
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #2b2e62;
+    padding-left: 12px;
+}
+
+.menu_elem{
+    margin-bottom: 12;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+#valasztott{
+    background-color: #303030;
+}
+
+.menu_elem:hover{
+    background-color: #303030;
+}
+
+
+.tema{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+
+.szoveg{
+    margin: 12px;
+}
+
+.kep_oszlop{
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.kep{
+    width: 28vw;
+    max-width: 320px;
+    min-width: 220px;
+    margin: 0px;
+}
+
+#gonosz_kenobi{
+    background-image: url("pictures/evil_general_kenobi.jpg");
+    background-size: 100%;
+}
+
+#gonosz_kenobi:hover{
+    background-image: none;
+}
+
+.trukkos_kep{
+    opacity: 0;
+}
+
+.trukkos_kep:hover{
+    opacity: 1;
+}
+
+.kepen_szoveg{
+    margin: 24px;
+    position: relative;
+}
+
+.kep_nagy{
+    width: 100%;
+}
+
+.felso_szoveg{
+    position: absolute;
+    font-size: 4vw;
+    top: 2vw;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.also_szoveg{
+    position: absolute;
+    font-size: 4vw;
+    bottom: 2vw;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.also_szoveg:hover::before{
+    content: "BOTTOM TEXT";
+}
+
+.also_szoveg:hover span{
+    display: none;
+}
+
+@media only screen and (max-width: 548px) {
+    .tema{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 12px;
+    }   
+    
+    .kep{
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 448px) {
+    body{
+        padding-top: 24px;
+    }
+
+    .menu{
+        flex-direction: column;
+        padding-left: 0px;
+        margin-left: 24px;
+        width: max-content;
+    }
+
+    .menu_elem{
+        margin: 12px;
+    }
+}
+
+.kontener_nagy{
+    display: flex;
+    flex-direction: row;
+    margin: 12px;
+}
+
+.kontener_kozepes{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.kontener_kicsi{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.kep_kicsi{
+    padding: 12px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .kontener_nagy{
+        flex-direction: column;
+    }
+    .kontener_kozepes{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .kontener_kozepes{
+        flex-direction: column;
+    }
+    .kontener_kicsi{
+        width: 100%;
+    }
+}
